@@ -1,0 +1,28 @@
+{
+    "name": "pocketEx",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Extends Pocket styles",
+    "icons": {
+        "16": "images/pocket16.png",
+        "48": "images/pocket48.png",
+        "128": "images/pocket128.png"
+    },
+    "background": {
+        "persistant": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.getpocket.com/a/read/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "*://*.getpocket.com/a/read/*"
+    ]
+}
